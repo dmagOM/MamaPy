@@ -1,13 +1,11 @@
-cdef extern from "mama/mamacpp.h" namespace "Wombat":
-    cdef cppclass Mama:
-        pass    
+include "status.pxi"
 
-    cdef extern from "mama/mamacpp.h" namespace "Mama":
-        cdef void open "Mama::open"()
-        cdef void close "Mama::close"()
+cdef extern from "mama/mama.h":
+    struct mamaBridge:
+        pass
 
-cdef class MamaPy:
-    def open(self):
-        open()
-    def close(self):
-        close()
+    struct mamaPayloadBridge:
+        pass
+
+    mama_status mama_loadBridge (mamaBridge *bridge, char *middleware)
+    mama_status mama_loadPayloadBridge (mamaPayloadBridge *bridge, char *payloadName)
