@@ -3,10 +3,10 @@ from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
 setup(
-  name = 'MAMA',
+  name = 'MamaPy',
   ext_modules=[
-    Extension("MAMA",
-              sources=["mamapython.pxd", "MamaPy.pyx"], # Note, you can link against a c++ library instead of including the source
+    Extension("MamaPy",
+              sources=["MamaPy.pyx"], # Note, you can link against a c++ library instead of including the source
               language="c",
               include_dirs=['/opt/openmama/OpenMAMA/openmama_install_2.3.3/include/'],
               library_dirs=['/opt/openmama/OpenMAMA/openmama_install_2.3.3/lib/'],
