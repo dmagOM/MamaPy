@@ -1,11 +1,7 @@
 include "mama/status.pxi"
+include "mama/types.pxi"
 
 cdef extern from "mama/mama.h":
-    struct mamaBridge:
-        pass
-
-    struct mamaPayloadBridge:
-        pass
 
     # Load a new Middleware Bridge
     mama_status mama_loadBridge (mamaBridge *bridge, char *middleware)
