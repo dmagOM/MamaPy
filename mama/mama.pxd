@@ -1,5 +1,5 @@
-include "mama/status.pxi"
-include "mama/types.pxi"
+include "status.pxi"
+include "types.pxi"
 
 cdef extern from "mama/mama.h":
 
