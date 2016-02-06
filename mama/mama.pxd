@@ -1,6 +1,3 @@
-include "status.pxi"
-include "types.pxi"
-
 cdef extern from "mama/mama.h":
 
     # Load a new Middleware Bridge

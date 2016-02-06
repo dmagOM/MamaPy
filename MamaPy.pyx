@@ -1,4 +1,7 @@
+include "mama/status.pxi"
+include "mama/types.pxi"
 include "mama/mama.pxd"
+include "mama/queue.pxd"
 
 from os import path
 
